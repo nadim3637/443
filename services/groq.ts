@@ -10,7 +10,7 @@ export const callGroqApi = async (messages: any[], model: string = "llama3-8b-81
     let safeModel = model;
     if (!safeModel || safeModel.includes("gemini")) {
         console.warn(`Invalid Groq model requested: ${safeModel}. Falling back to llama3-8b-8192.`);
-        safeModel = "llama3-8b-8192";
+        safeModel = "llama-3.1-8b-instant";
     }
 
     // Proxy call to server
